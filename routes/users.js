@@ -18,7 +18,7 @@ router.get('/', function(req, res) {
 router.get('/user/:user', function(req, res) {
 	var params= {
 		username: req.param('user')
-	}
+	};
 	model.getUser(params, function(err, obj){
 		if(err){
 	  		res.status(500).send({error: 'An unknown server error has occurred!'});
