@@ -67,11 +67,14 @@ app.use(function(err, req, res, next) {
 app.set('port', globals.applicationPort);
 
 var server = app.listen(app.get('port'), function() {
-  debug('Express server listening on port ' + server.address().port);
+
+    debug('Express server listening on port ' + server.address().port);
+
     var connection  = mysql.createConnection(globals.database);
+
     connection.connect(function(err) {
         if(err){
-            console.log('error connecting to database:');
+            console.log('error connecting to database:' + err);
         } else {
             console.log('connected to database!');
         }
