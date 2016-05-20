@@ -25,7 +25,7 @@ router.get('/id/:albumID', function(req, res) {
 	}
 });
 
-/* POST create album. */
+/* POST create album */
 
 router.post('/upload', function(req, res) {
 	if (req.param('title') && req.param('userID')) {
@@ -49,7 +49,7 @@ router.post('/upload', function(req, res) {
 	}
 });
 
-/* POST delete album. */
+/* POST delete album */
 
 router.post('/delete', function(req, res) {
 	if (req.param('albumID')) {
